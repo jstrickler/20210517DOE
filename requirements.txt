@@ -1,0 +1,5 @@
+paramiko
+pylint
+requests
+pytest
+ibm-db
