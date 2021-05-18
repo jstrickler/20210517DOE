@@ -10,4 +10,7 @@ print("Romance in F\u266F Major")
 print()
 
 data = ['\U0001F95A', '\U0001F414']  # <5>
+print(data)
 print(sorted(data))
+print('\N{PLUS SIGN WITH SMALL CIRCLE ABOVE}')
+
