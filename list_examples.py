@@ -76,7 +76,48 @@ food.remove('spam')
 print(food)
 
 print('spam' in food, 'eggs' in food)
+print()
 
+print("cities: {}\n".format(cities))
+
+print(cities[0], cities[8], cities[len(cities) - 1], cities[-1])
+
+# print(cities[9])
+
+# START is INclusive  STOP is EXclusive
+
+print(cities[0:5])  # 0, 1, 2, 3, 4
+print(cities[:5])   # 0, 1, 2, 3, 4
+print(cities[2:6])
+print(cities[:5])
+print(cities[4:])
+print(cities[:])
+
+state = "California"
+print(state[:4])
+print(state[5:7])
+print(state[-3:])
+print()
+
+# slice-able: list str tuple bytes
+# NOT slice-able: dict set generator
+
+# for VAR ... in ITERABLE:
+#    ...
+
+for city in cities:
+    # city = next(cities)
+    print(city)
+print()
+
+word = "abc"
+for char in word:
+    print(char)
+print()
+
+colors = "red:green:blue"
+for color in colors.split(':'):
+    print(color)
 
 
 
