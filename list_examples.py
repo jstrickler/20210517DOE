@@ -118,8 +118,67 @@ print()
 colors = "red:green:blue"
 for color in colors.split(':'):
     print(color)
+print()
 
+print(cities, '\n')
 
+print(len(cities), min(cities), max(cities))
+print(sorted(cities))
+print()
+
+for city in reversed(cities):
+    print(city)
+print()
+
+values = [12, 5, 6, 4, 9, 8, 10, 12, 7, 3, 2, 11, 15]
+
+for city, value in zip(cities, values):
+    print(city, value)
+
+print(list(zip(cities, values)), '\n')
+
+print(zip(cities, values))
+print(reversed(cities))
+print()
+
+zz = zip(cities, values)
+print(zz)
+cities.append('Santa Rosita')
+for city, value in zz:
+    print(city, value)
+print()
+
+for i, city in enumerate(cities):
+    print(i, city)
+
+print(list(enumerate(cities)))
+
+print(['False'] * 10)
+
+print(['foo', 'bar'] + ['spam', 'ham', 'toast'])
+
+tt = 1, 2, 3    # tuple
+ll = [4, 5, 6]  # list
+
+print(tt + tuple(ll))
+print(list(tt) + ll)
+
+print("Berkeley" in cities)
+print("Durham" in cities)
+
+for i in range(10):
+    print("*" * i)
+print()
+
+for i in range(5, 101, 5):
+    print(i, end=' ')
+print('\n')
+
+for _ in range(3):
+    print("yadda")
+print()
+
+print(range(1000000))
 
 
 
