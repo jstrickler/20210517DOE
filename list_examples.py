@@ -179,7 +179,11 @@ for _ in range(3):
 print()
 
 print(range(1000000))
+print()
 
+for i, city in enumerate(cities, 1):
+    print(i, city)
+print()
 
 
 
