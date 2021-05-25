@@ -12,11 +12,11 @@ officia deserunt Y-45 mollit anim id est laborum"""
 
 pattern = r'[A-Z]-\d{2,3}'
 
-if re.search(pattern, s, re.IGNORECASE):  # <1>
+if re.search(pattern, s, re.IGNORECASE):  # like m/.../i in PERL
     print("Found pattern.")
 print()
 
-m = re.search(pattern, s, re.I | re.M)  # <2>
+m = re.search(pattern, s, re.I | re.M)  # like m/.../im
 if m:
     print("Found:", m.group())
 print()

@@ -12,6 +12,8 @@ officia deserunt Y-45 mollit anim id est laborum"""
 
 rx_code = re.compile(r'[A-Z]-\d{2,3}')  # <1>
 
+# my $rx_code = qr('[A-Z]-\d{2,3}');   # PERL
+
 if rx_code.search(s):  # <2>
     print("Found pattern.")
 print()
@@ -27,3 +29,5 @@ print()
 
 matches = rx_code.findall(s)
 print("matches:", matches)
+
+

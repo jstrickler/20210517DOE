@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import types
 
 class Knight():
     def __init__(self, name, title, color):
@@ -27,12 +27,44 @@ class Knight():
 if __name__ == '__main__':
     k = Knight("Lancelot", "Sir", 'blue')
 
-    # Bridgekeeper's question
-    print('Sir {}, what is your...favorite color?'.format(k.name))  # <4>
+    print(k)
+    print(k.name, k.title, k.color)
 
-    # Knight's answer
-    print("red, no -- {}!".format(k.color))
+    attr_names = ['name', 'title', 'color']
 
-    k.color = 'red'  # <5>
+    print(getattr(k, 'name'))
+    print()
 
-    print("color is now:", k.color)
+    for aname in attr_names:
+        print(aname, getattr(k, aname))
+    print()
+
+    if hasattr(k, 'title'):
+        print(getattr(k, 'title'))
+
+    # ....
+    def custom_jsonify(x):
+        pass
+
+    if hasattr(k, 'to_json'):
+        json_string = k.to_json()
+    else:
+        json_string = custom_jsonify(k)
+
+    # getattr()  hasattr()  setattr() delattr()
+
+    setattr(Knight, 'joust', lambda self: print("JOUSTING!"))
+
+    k.joust()
+
+    def fight(self):
+        print("Fighting fighting fighting, then off for a spot of tea.")
+
+    setattr(k, 'fight', types.MethodType(fight, Knight))
+
+    k.fight()
+
+    k2 = Knight('Arthur', 'king', 'green')
+    k2.joust()
+
+    k2.fight()

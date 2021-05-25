@@ -6,5 +6,13 @@ def trimmed(file_name):
             yield line.rstrip('\n\r')  # <1>
 
 
-for trimmed_line in trimmed('../DATA/mary.txt'):  # <2>
+t = trimmed('../DATA/mary.txt')
+print(t, '\n')
+
+for trimmed_line in t:  # <2>
     print(trimmed_line)
+print()
+
+t = trimmed('../DATA/mary.txt')
+print(next(t))
+print(next(t))

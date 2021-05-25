@@ -5,10 +5,10 @@ class TrimmedFile:
     def __init__(self, file_name):  # <1>
         self._file_in = open(file_name)
 
-    def __iter__(self):  # <2>
+    def __iter__(self):  # responds to iter(obj)
         return self
 
-    def __next__(self):  # <3>
+    def __next__(self):  # makes this instance an iterator
         line = self._file_in.readline()
         if line == '':
             raise StopIteration  # <4>
