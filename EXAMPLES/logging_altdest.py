@@ -11,18 +11,19 @@ if sys.platform == 'win32':
     logger.addHandler(eventlog_handler)  # <4>
 else:
     syslog_handler = logging.handlers.SysLogHandler()  # <5>
+    syslog_handler.setLevel(logging.WARNING)
     logger.addHandler(syslog_handler)  # <6>
 
-# note -- use your own SMTP server...
-email_handler = logging.handlers.SMTPHandler(
-    ('smtpcorp.com', 8025),
-    'LOGGER@pythonclass.com',
-    ['jstrick@mindspring.com'],
-    'ThisApplication Log Entry',
-    ('jstrickpython', 'python(monty)'),
-)  # <7>
-
-logger.addHandler(email_handler)  # <8>
+# # note -- use your own SMTP server...
+# email_handler = logging.handlers.SMTPHandler(
+#     ('smtpcorp.com', 8025),
+#     'LOGGER@pythonclass.com',
+#     ['jstrick@mindspring.com'],
+#     'ThisApplication Log Entry',
+#     ('jstrickpython', 'python(monty)'),
+# )  # <7>
+#
+# logger.addHandler(email_handler)  # <8>
 
 logger.debug('this is debug')  # <9>
 logger.critical('this is critical')  # <9>

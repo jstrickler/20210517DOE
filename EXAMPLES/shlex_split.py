@@ -2,6 +2,7 @@
 #
 import shlex
 
+# cmd = "some_command -d "foo bar"  "Blah blah blah" mango walnut
 cmd = 'herp derp "fuzzy bear" "wanga tanga" pop'  # <1>
 
 print(cmd.split())  # <2>
