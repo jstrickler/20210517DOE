@@ -19,3 +19,10 @@ with sqlite3.connect("../DATA/presidents.db") as s3conn:  # <1>
 
 # class PresidentDB:
 #    pass
+
+# query = """
+# insert into foo (spam, ham)
+# values (%(firstname), %lastname)
+# """
+#
+# cursor.execute({'firstname': 'Joe', 'lastname': "Blow"})

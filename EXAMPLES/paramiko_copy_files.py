@@ -21,4 +21,11 @@ with paramiko.Transport(('localhost', 22)) as transport:  # <.>
     sftp.put('../DATA/alice.txt', 'text_files')
     sftp.get(remote_file, 'eileen.txt')  # <.>
 
+    for item in sftp.listdir_iter():  # <.>
+        print(item)
+    print('-' * 60)
 
+
+    del sftp
+
+#    run("ssh whatever -c do something ....".split())

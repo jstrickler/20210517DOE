@@ -27,6 +27,7 @@ msg.set_content(MESSAGE_BODY)  # <9>
 msg['Subject'] = MESSAGE_SUBJECT  # <10>
 msg['from'] = SENDER  # <11>
 msg['to'] = RECIPIENTS  # <12>
+# msg['cc'] = ['bob@wherever.com']
 
 try:
     smtpserver.send_message(msg)  # <13>

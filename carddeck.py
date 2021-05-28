@@ -1,6 +1,18 @@
+"""
+Card Deck
+
+Provide a deck of cards that can be shuffled and dealt.
+"""
 import random
 
 class CardDeck:  # (object)
+    """
+    One standard deck of 52 cards.
+
+    Methods:
+        shuffle()  -- shuffle the cards
+        draw()     -- draw 1 card
+    """
     RANKS = '2 3 4 5 6 7 8 9 10 J Q K A'.split()
     SUITS = 'Clubs Diamonds Hearts Spades'.split()
 
@@ -90,6 +102,6 @@ class CardDeck:  # (object)
     def __add__(self, other):
         my_type = type(self)
         tmp = my_type(self.dealer)
-        tmp._cards = self._cards + other._cards
+        tmp._cards = self.cards + other.cards
         return tmp
 
